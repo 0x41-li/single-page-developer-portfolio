@@ -1,3 +1,20 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* fonts */
+@font-face {
+  src: url("/assets/fonts/static/Space-Grotestk-bold.ttf") format("truetype");
+  font-family: "Space Grotesk";
+  font-weight: 700;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  src: url("/assets/fonts/static/Space-Grotestk-bold.ttf") format("truetype");
+  font-family: "Space Grotesk";
+  font-weight: 500;
+  font-display: swap;
+  font-style: normal;
+}
