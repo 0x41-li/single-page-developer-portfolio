@@ -1,4 +1,6 @@
-const Header = () => {
+import React from "react";
+
+const Header: React.FC = () => {
   return (
     <div className="absolute mt-5 w-full md:mt-[29px]">
       <div className="mx-auto flex max-w-[153px] flex-col items-center gap-5 md:max-w-[708px] md:flex-row md:justify-between xl:mt-[39px] xl:max-w-[1110px] xl:pr-[29px]">
