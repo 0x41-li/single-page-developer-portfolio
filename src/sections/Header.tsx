@@ -1,5 +1,3 @@
-import React from "react";
-
 const Header = () => {
   return (
     <div className="absolute mt-5 w-full md:mt-[29px]">
