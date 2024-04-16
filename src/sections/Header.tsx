@@ -2,8 +2,8 @@ import React from "react";
 
 const Header: React.FC = () => {
   return (
-    <header className="absolute z-50 mt-5 w-full md:mt-[29px]">
-      <div className="mx-auto flex max-w-[153px] flex-col items-center gap-5 md:max-w-[708px] md:flex-row md:justify-between xl:mt-[39px] xl:max-w-[1110px] xl:pr-[29px]">
+    <header className="absolute z-50 mt-5 w-full md:mt-[29px] xl:mt-[39px] ">
+      <div className="mx-auto flex max-w-[153px] flex-col items-center gap-5 md:max-w-[708px] md:flex-row md:justify-between xl:max-w-[1110px] xl:pr-[29px]">
         {/* Logo */}
         <a
           href="/"
