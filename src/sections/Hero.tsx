@@ -35,7 +35,7 @@ const Hero: React.FC = () => {
         </div>
 
         {/* Text Part */}
-        <div className="mx-auto mt-10 max-w-[343px] md:mb-[10px] md:flex md:max-w-none md:flex-1">
+        <div className="mx-auto mt-10 max-w-[343px] md:flex md:max-w-none md:flex-1">
           {/*  */}
           <div className="md:flex-shrink-0 md:flex-grow-0 md:basis-[443px]">
             {/* Heading */}
@@ -49,7 +49,7 @@ const Hero: React.FC = () => {
             </div>
 
             {/* Paragraph */}
-            <p className="mt-6 text-center font-medium leading-[26px] md:mt-[66px] md:text-left md:text-lg">
+            <p className="mt-6 text-center font-medium leading-[26px] text-soft-gray md:mt-[66px] md:text-left md:text-lg">
               Based in the UK, I’m a front-end developer passionate about
               building accessible web apps that users love.
             </p>
@@ -57,11 +57,11 @@ const Hero: React.FC = () => {
             {/* Button */}
             <div className="mt-6 text-center md:mt-[34px] md:text-left">
               <a
-                className="relative mx-auto font-bold leading-7 tracking-[2.29px] md:leading-[26px]"
+                className="relative mx-auto inline-block h-[38px] font-bold leading-7 tracking-[2.29px] md:leading-[26px]"
                 href="#contactme"
               >
                 CONTACT ME
-                <span className="absolute -bottom-[14px] left-0 h-[2px] w-full bg-green md:-bottom-[12px]" />
+                <span className="absolute bottom-0 left-0 h-[2px] w-full bg-green" />
               </a>
             </div>
           </div>
