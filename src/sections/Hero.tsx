@@ -41,8 +41,9 @@ const Hero: React.FC = () => {
             {/* Heading */}
             <div className="relative">
               <h1 className="text-center text-[40px] font-bold leading-[40px] -tracking-[1.14px] md:text-left md:text-7xl md:leading-[72px] md:-tracking-[2px]">
-                Nice to <span className="hidden md:block" />
-                meet you! I’m <span className="mt-[11px] hidden md:block" />
+                Nice to <br aria-hidden className="hidden md:block" />
+                meet you! I’m{" "}
+                <br aria-hidden className="mt-[11px] hidden md:block" />
                 Adam Keyes.
               </h1>
               <span className="absolute -bottom-[4px] right-8 h-[4px] w-[225px] bg-green md:-bottom-[6px] md:left-0 md:right-0 md:h-[6px] md:w-[402px]" />
