@@ -5,7 +5,7 @@ import unfilledWhiteBorderOval_PNG from "../assets/graphics/unfilled-white-borde
 
 const Hero: React.FC = () => {
   return (
-    <div
+    <section
       className="bg-no-repeat [background-position:left_-342px_top_124px] md:[background-position:left_-265px_top_86px]"
       style={{
         backgroundImage: `url(${linesDonut_PNG})`,
@@ -68,7 +68,7 @@ const Hero: React.FC = () => {
           {/*  */}
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
