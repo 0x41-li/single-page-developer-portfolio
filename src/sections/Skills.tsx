@@ -18,7 +18,7 @@ const Skills: React.FC = () => {
   return (
     <section className="mt-20  md:mt-[60px] xl:mt-[104px]">
       <div className="relative mx-auto max-w-[1100px]">
-        <div className="absolute -right-[344px] top-[540px] md:-right-[332px] md:top-[387px] ">
+        <div className="absolute -right-[344px] top-[540px] md:-right-[332px] md:top-[387px] xl:-right-[404px] xl:top-[253px]">
           <picture>
             <img
               aria-hidden
