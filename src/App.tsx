@@ -2,6 +2,7 @@
 import Header from "./sections/Header";
 import Hero from "./sections/Hero";
 import Skills from "./sections/Skills";
+import Projects from "./sections/Projects";
 
 const App: React.FC = () => {
   return (
@@ -9,6 +10,7 @@ const App: React.FC = () => {
       <Header />
       <Hero />
       <Skills />
+      <Projects />
     </div>
   );
 };
