@@ -14,12 +14,12 @@ import artGalleryShowcasePNG2x from "../assets/images/projects/art-gallery-showc
 
 const Projects: React.FC = () => {
   return (
-    <section className="mt-20">
-      <div className="mx-auto max-w-[343px]">
-        {/* section head */}
-        <div className="flex items-center justify-between">
+    <section className="mt-20 md:mt-[100px]">
+      <div className="mx-auto max-w-[343px] md:max-w-[708px]">
+        {/* section's head */}
+        <div className="flex items-center justify-between md:mx-auto md:max-w-[706px]">
           {/* heading */}
-          <h2 className="text-[40px] font-bold leading-none -tracking-[1.14px]">
+          <h2 className="text-[40px] font-bold font-bold leading-none -tracking-[1.14px] md:text-7xl md:-tracking-[2.05px]">
             Projects
           </h2>
 
@@ -34,8 +34,7 @@ const Projects: React.FC = () => {
         </div>
 
         {/* projects grid */}
-        <div className="mt-10 flex flex-col gap-10">
-          {/* project */}
+        <div className="mt-10 flex flex-col gap-10 md:mt-[60px] md:flex-row md:flex-wrap md:justify-between md:gap-0 md:gap-y-[60px]">
           <ProjectCard
             title="Design Portfolio"
             imageSrc={designPortfolioPNG2x}

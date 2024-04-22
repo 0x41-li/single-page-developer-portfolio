@@ -16,7 +16,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   previewProject,
 }) => {
   return (
-    <div className="">
+    <div className="md:basis-[342px]">
       {/* project picture */}
       <div className="">
         <picture>
