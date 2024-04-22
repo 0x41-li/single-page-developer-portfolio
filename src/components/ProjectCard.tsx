@@ -5,7 +5,7 @@ type ProjectCardProps = {
   title: string;
   technologies: Array<string>;
   sourceCodeLink: string;
-  previewProject: string;
+  previewProjectLink: string;
 };
 
 const ProjectCard: React.FC<ProjectCardProps> = ({
@@ -13,14 +13,20 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   title,
   technologies,
   sourceCodeLink,
-  previewProject,
+  previewProjectLink,
 }) => {
   return (
-    <div className="md:basis-[342px]">
+    <div className="md:basis-[342px] xl:basis-[540px]">
       {/* project picture */}
       <div className="">
         <picture>
-          <img src={imageSrc} alt="Design Portfolio Project" className="" />
+          <img
+            height="253px"
+            width="345px"
+            src={imageSrc}
+            alt="Design Portfolio Project"
+            className="w-full max-w-full object-cover md:h-[253px] xl:h-[400px]"
+          />
         </picture>
       </div>
 
@@ -40,9 +46,9 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
         </div>
 
         {/* Project buttons */}
-        <div className="mt-5 flex gap-[30px]">
+        <div className="mt-5 flex gap-[30px] xl:hidden">
           <a
-            href={previewProject}
+            href={previewProjectLink}
             className="relative inline-block h-[38px] font-bold leading-7 tracking-[2.29px] md:leading-[26px]"
           >
             VIEW PROJECT
