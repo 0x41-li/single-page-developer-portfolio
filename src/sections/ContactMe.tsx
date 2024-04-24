@@ -3,12 +3,12 @@ import linesDonut_PNG from "../assets/graphics/lines-donut.png";
 
 const ContactMe: React.FC = () => {
   return (
-    <section className="relative mt-20 bg-hard-gray pb-[87px] md:mt-[100px] md:pb-[92px]">
+    <section className="relative mt-20 bg-hard-gray pb-[87px] md:mt-[100px] md:pb-[92px] xl:mt-[139px]">
       {/* background graphic */}
       {/* the lines donut graphic */}
       <div
         aria-hidden
-        className="absolute -left-[343px] top-[436px] md:-left-[368px] md:top-[547px]"
+        className="absolute -left-[343px] top-[436px] md:-left-[368px] md:top-[547px] xl:-left-[205px] xl:top-[327px]"
       >
         <picture>
           <img
@@ -19,20 +19,25 @@ const ContactMe: React.FC = () => {
       </div>
 
       {/* Content */}
-      <div className="mx-auto max-w-[343px] pt-[60px] md:max-w-[445px]">
+      <div className="mx-auto max-w-[343px] pt-[60px] md:max-w-[445px] xl:flex xl:max-w-[1110px] xl:justify-between xl:pt-[84px]">
         {/* Section's head */}
-        <div className="">
-          <h2 className="text-center text-[40px] font-bold leading-none -tracking-[1.14px] md:text-[72px] md:-tracking-[2.04px]">
+        <div className="basis-[445px]">
+          <h2 className="text-center text-[40px] font-bold leading-none -tracking-[1.14px] md:text-[72px] md:-tracking-[2.04px] xl:text-left xl:text-[88px] xl:-tracking-[2.5px]">
             Contact
           </h2>
-          <p className="mt-5 text-center text-base font-medium leading-[26px] md:text-lg">
+
+          <p className="mt-5 text-center text-base font-medium leading-[26px] md:text-lg xl:mt-[36px] xl:text-left">
             I would love to hear about your project and how I could help. Please
             fill in the form, and I’ll get back to you as soon as possible.
           </p>
         </div>
 
         {/* Contact form */}
-        <form action="#" method="POST" className="mt-[50px] md:mt-[48px]">
+        <form
+          action="#"
+          method="POST"
+          className="mt-[50px] basis-[445px] md:mt-[48px] xl:mt-0"
+        >
           <div className="space-y-8">
             <input
               type="text"
