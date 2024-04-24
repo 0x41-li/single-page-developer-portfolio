@@ -3,10 +3,13 @@ import linesDonut_PNG from "../assets/graphics/lines-donut.png";
 
 const ContactMe: React.FC = () => {
   return (
-    <section className="relative mt-20 bg-hard-gray">
+    <section className="relative mt-20 bg-hard-gray pb-[87px] md:mt-[100px] md:pb-[92px]">
       {/* background graphic */}
       {/* the lines donut graphic */}
-      <div aria-hidden className="absolute -left-[343px] top-[436px]">
+      <div
+        aria-hidden
+        className="absolute -left-[343px] top-[436px] md:-left-[368px] md:top-[547px]"
+      >
         <picture>
           <img
             src={linesDonut_PNG}
@@ -16,26 +19,26 @@ const ContactMe: React.FC = () => {
       </div>
 
       {/* Content */}
-      <div className="mx-auto max-w-[343px] border-b border-white pb-[87px] pt-[60px]">
+      <div className="mx-auto max-w-[343px] pt-[60px] md:max-w-[445px]">
         {/* Section's head */}
         <div className="">
-          <h2 className="text-center text-[40px] font-bold leading-none -tracking-[1.14px]">
+          <h2 className="text-center text-[40px] font-bold leading-none -tracking-[1.14px] md:text-[72px] md:-tracking-[2.04px]">
             Contact
           </h2>
-          <p className="mt-5 text-center text-base font-medium leading-[26px]">
+          <p className="mt-5 text-center text-base font-medium leading-[26px] md:text-lg">
             I would love to hear about your project and how I could help. Please
             fill in the form, and I’ll get back to you as soon as possible.
           </p>
         </div>
 
         {/* Contact form */}
-        <form action="#" method="POST">
+        <form action="#" method="POST" className="mt-[50px] md:mt-[48px]">
           <div className="space-y-8">
             <input
               type="text"
               name="name"
               placeholder="name"
-              className="mt-[50px] block h-[43px] w-full border-b border-white bg-transparent bg-opacity-0 pb-4 pl-6 font-medium placeholder:text-base placeholder:uppercase placeholder:leading-[26px] placeholder:-tracking-[0.2px] focus:outline-none"
+              className="block h-[43px] w-full border-b border-white bg-transparent bg-opacity-0 pb-4 pl-6 font-medium placeholder:text-base placeholder:uppercase placeholder:leading-[26px] placeholder:-tracking-[0.2px] focus:outline-none"
             />
 
             <input
