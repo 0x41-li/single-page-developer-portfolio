@@ -3,6 +3,7 @@ import Header from "./sections/Header";
 import Hero from "./sections/Hero";
 import Skills from "./sections/Skills";
 import Projects from "./sections/Projects";
+import ContactMe from "./sections/ContactMe";
 
 const App: React.FC = () => {
   return (
@@ -11,6 +12,7 @@ const App: React.FC = () => {
       <Hero />
       <Skills />
       <Projects />
+      <ContactMe />
     </div>
   );
 };
