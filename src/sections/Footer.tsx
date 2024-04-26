@@ -3,7 +3,7 @@ import React from "react";
 const Footer: React.FC = () => {
   return (
     <footer className="bg-hard-gray">
-      <div className="mx-auto flex max-w-[343px] flex-col items-center gap-5 border-t border-white pb-[60px] pt-[39px] md:max-w-[708px] md:flex-row md:justify-between md:pt-[30px] xl:max-w-[1110px] xl:pr-[29px]">
+      <div className="mx-auto flex max-w-[343px] flex-col items-center gap-5 border-t border-white pb-10 pb-[60px] pt-[39px] md:max-w-[708px] md:flex-row md:justify-between md:pt-[30px] xl:max-w-[1110px] xl:pr-[29px]">
         {/* Logo */}
         <a
           href="/"
