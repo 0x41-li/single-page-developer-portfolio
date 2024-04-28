@@ -1,4 +1,9 @@
 import React from "react";
+
+// comps
+import { Primary as AnchorPrimary } from "../components/Buttons/Primary";
+
+// Assets
 import developerProfileImage_PNG from "../assets/images/developer-profile-image.png";
 import linesDonut_PNG from "../assets/graphics/lines-donut.png";
 import unfilledWhiteBorderOval_PNG from "../assets/graphics/unfilled-white-bordered-oval.png";
@@ -39,6 +44,7 @@ const Hero: React.FC = () => {
           {/* Wrapper to overflow it and not affect the parent flex child */}
           <div className="md:max-w-[413px] xl:max-w-[665px]">
             {/*  */}
+
             <div className="w-[343px] md:w-[443px] xl:w-[706px]">
               {/* A wrapper to achieve the same underline effect as the design */}
               <div className="relative">
@@ -70,17 +76,16 @@ const Hero: React.FC = () => {
 
               {/* Button */}
               <div className="mt-6 text-center md:mt-[34px] md:text-left xl:mt-[66px]">
-                <a
-                  className="relative mx-auto inline-block h-[38px] font-bold leading-7 tracking-[2.29px] md:leading-[26px]"
-                  href="#contactme"
-                >
-                  CONTACT ME
-                  <span className="absolute bottom-0 left-0 h-[2px] w-full bg-green" />
-                </a>
+                <AnchorPrimary type="anchor" href="#contact-form">
+                  Contact Me
+                </AnchorPrimary>
               </div>
+              {/*  */}
             </div>
+
             {/*  */}
           </div>
+
           {/*  */}
         </div>
       </div>

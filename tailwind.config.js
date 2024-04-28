@@ -1,6 +1,10 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: ["./index.html", "./src/**/*.{js,jsx,ts,tsx}"],
+  content: [
+    "./index.html",
+    "./src/components/**/*.{js,jsx,ts,tsx}",
+    "./src/sections/**/*.{js,jsx,ts,tsx}",
+  ],
   theme: {
     fontFamily: {
       "space-grotesk": ["Space Grotesk", "sans-serif"],
