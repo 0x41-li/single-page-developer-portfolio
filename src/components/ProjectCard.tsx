@@ -1,4 +1,5 @@
 import React from "react";
+import { Primary as AnchorPrimary } from "./buttons/Primary";
 
 type ProjectCardProps = {
   imageSrc: string;
@@ -47,22 +48,16 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
 
         {/* Project buttons */}
         <div className="mt-5 flex gap-[30px] xl:hidden">
-          <a
-            href={previewProjectLink}
-            className="relative inline-block h-[38px] font-bold leading-7 tracking-[2.29px] md:leading-[26px]"
-          >
-            VIEW PROJECT
-            <span className="absolute bottom-0 left-0 h-[2px] w-full bg-green" />
-          </a>
+          <AnchorPrimary type="anchor" href={previewProjectLink}>
+            view project
+          </AnchorPrimary>
 
-          <a
-            href={sourceCodeLink}
-            className="relative inline-block h-[38px] font-bold leading-7 tracking-[2.29px] md:leading-[26px]"
-          >
-            VIEW CODE
-            <span className="absolute bottom-0 left-0 h-[2px] w-full bg-green" />
-          </a>
+          <AnchorPrimary type="anchor" href={sourceCodeLink}>
+            view code
+          </AnchorPrimary>
         </div>
+
+        {/*  */}
       </div>
     </div>
   );

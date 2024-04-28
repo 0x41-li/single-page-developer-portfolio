@@ -3,6 +3,7 @@ import React from "react";
 
 // components
 import ProjectCard from "../components/ProjectCard";
+import { Primary as AnchorPrimary } from "../components/buttons/Primary";
 
 // images
 import designPortfolioPNG2x from "../assets/images/projects/design-portfolio-2x.png";
@@ -70,13 +71,9 @@ const Projects: React.FC = () => {
           </h2>
 
           {/* contact us button */}
-          <a
-            className="relative inline-block h-[38px] font-bold leading-7 tracking-[2.29px] md:leading-[26px]"
-            href="#contactme"
-          >
-            CONTACT ME
-            <span className="absolute bottom-0 left-0 h-[2px] w-full bg-green" />
-          </a>
+          <AnchorPrimary type="anchor" href="#contact-me">
+            contact me
+          </AnchorPrimary>
         </div>
 
         {/* projects grid */}
@@ -86,6 +83,7 @@ const Projects: React.FC = () => {
             <ProjectCard key={project.title} {...project} />
           ))}
         </div>
+
         {/*  */}
       </div>
     </section>

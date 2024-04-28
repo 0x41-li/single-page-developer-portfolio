@@ -1,7 +1,7 @@
 import React from "react";
 
 // comps
-import { Primary as AnchorPrimary } from "../components/Buttons/Primary";
+import { Primary as AnchorPrimary } from "../components/buttons/Primary";
 
 // Assets
 import developerProfileImage_PNG from "../assets/images/developer-profile-image.png";
@@ -80,6 +80,7 @@ const Hero: React.FC = () => {
                   Contact Me
                 </AnchorPrimary>
               </div>
+
               {/*  */}
             </div>
 

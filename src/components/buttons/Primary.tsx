@@ -18,7 +18,7 @@ const Primary: React.FC<PrimaryProps> = ({
   }
 
   const className =
-    "relative mx-auto inline-block h-[38px] font-bold leading-7 tracking-[2.29px] md:leading-[26px] uppercase hover:text-green duration-200";
+    "relative inline-block h-[38px] font-bold leading-7 tracking-[2.29px] md:leading-[26px] uppercase hover:text-green duration-200";
 
   return React.createElement(
     TagName,
