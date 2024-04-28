@@ -26,6 +26,7 @@ const Header: React.FC = () => {
           {myLinksData.map((currentLinkData) => {
             return (
               <IconLink
+                key={currentLinkData.name}
                 of={currentLinkData.name}
                 link={currentLinkData.link}
                 ariaLabel={currentLinkData.ariaLabel}
