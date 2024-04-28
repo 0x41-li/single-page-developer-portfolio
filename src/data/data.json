@@ -1,0 +1,26 @@
+{
+  "header": {
+    "iconLinks": [
+      { "name": "github", "link": "#", "ariaLabel": "My Github" },
+      {
+        "name": "frontendmentor",
+        "link": "#",
+        "ariaLabel": "My Frontendmentor"
+      },
+      { "name": "linkedin", "link": "#", "ariaLabel": "My Linkedin" },
+      { "name": "twitter", "link": "#", "ariaLabel": "My Twitter" }
+    ]
+  },
+  "footer": {
+    "iconLinks": [
+      { "name": "github", "link": "#", "ariaLabel": "My Github" },
+      {
+        "name": "frontendmentor",
+        "link": "#",
+        "ariaLabel": "My Frontendmentor"
+      },
+      { "name": "linkedin", "link": "#", "ariaLabel": "My Linkedin" },
+      { "name": "twitter", "link": "#", "ariaLabel": "My Twitter" }
+    ]
+  }
+}

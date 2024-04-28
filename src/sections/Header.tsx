@@ -1,14 +1,14 @@
 import React from "react";
+
+// components
 import IconLink from "../components/IconLink";
 
-const myLinksData = [
-  { name: "github", link: "#", ariaLabel: "My Github" },
-  { name: "frontendmentor", link: "#", ariaLabel: "My Frontendmentor" },
-  { name: "linkedin", link: "#", ariaLabel: "My Linkedin" },
-  { name: "twitter", link: "#", ariaLabel: "My Twitter" },
-];
+// data
+import data from "../data/data.json";
 
 const Header: React.FC = () => {
+  const { iconLinks } = data.header;
+
   return (
     <header className="absolute z-50 mt-5 w-full md:mt-[29px] xl:mt-[39px] ">
       <div className="mx-auto flex max-w-[153px] flex-col items-center gap-5 md:max-w-[708px] md:flex-row md:justify-between xl:max-w-[1110px] xl:pr-[29px]">
@@ -21,9 +21,9 @@ const Header: React.FC = () => {
           adamkeyes
         </a>
 
-        {/* My links */}
+        {/* Icon links */}
         <div className="flex gap-[25px] md:gap-8">
-          {myLinksData.map((currentLinkData) => {
+          {iconLinks.map((currentLinkData) => {
             return (
               <IconLink
                 key={currentLinkData.name}
