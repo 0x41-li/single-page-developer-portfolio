@@ -1,4 +1,9 @@
 import React from "react";
+
+// Components
+import { Primary as ButtonPrimary } from "../components/buttons/Primary";
+
+// Assets
 import linesDonut_PNG from "../assets/graphics/lines-donut.png";
 
 const ContactMe: React.FC = () => {
@@ -60,16 +65,16 @@ const ContactMe: React.FC = () => {
             ></textarea>
 
             <div className="mt-6 flex justify-end md:mt-[34px] xl:mt-[66px]">
-              <a
-                className="relative inline-block h-[38px] font-bold leading-7 tracking-[2.29px] md:leading-[26px]"
-                href="#contactme"
-              >
-                SEND MESSAGE
-                <span className="absolute bottom-0 left-0 h-[2px] w-full bg-green" />
-              </a>
+              <ButtonPrimary>send message</ButtonPrimary>
             </div>
+
+            {/*  */}
           </div>
+
+          {/*  */}
         </form>
+
+        {/*  */}
       </div>
     </section>
   );
