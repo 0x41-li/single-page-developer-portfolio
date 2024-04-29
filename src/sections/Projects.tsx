@@ -12,6 +12,7 @@ import todoWebAppPNG2x from "../assets/images/projects/todo-web-app-2x.png";
 import entertainmentWebAppPNG2x from "../assets/images/projects/entertainment-web-app-2x.png";
 import memoryGamePNG2x from "../assets/images/projects/memory-game-2x.png";
 import artGalleryShowcasePNG2x from "../assets/images/projects/art-gallery-showcase-2x.png";
+import Typography from "../components/Typography";
 
 // Data
 const data = [
@@ -67,9 +68,9 @@ const Projects: React.FC = () => {
         {/* section's head */}
         <div className="flex items-center justify-between md:mx-auto md:max-w-[706px] xl:max-w-[1110px]">
           {/* heading */}
-          <h2 className="text-[40px] font-bold leading-none -tracking-[1.14px] md:text-7xl md:-tracking-[2.05px] xl:text-[88px]">
+          <Typography tagName="h2" styles="xl">
             Projects
-          </h2>
+          </Typography>
 
           {/* contact us button */}
           <PrimaryButton type="anchor" href="#contact-form">
@@ -80,9 +81,12 @@ const Projects: React.FC = () => {
         {/* projects grid */}
         <div className="mt-10 flex flex-col gap-10 md:mt-[60px] md:flex-row md:flex-wrap md:justify-between md:gap-0 md:gap-y-[60px] xl:mt-[80px] xl:gap-y-[69px]">
           {/* Looping over the data array and rendering the ProjectCard component for each project */}
+
           {data.map((project) => (
             <ProjectCard key={project.title} {...project} />
           ))}
+
+          {/*  */}
         </div>
 
         {/*  */}

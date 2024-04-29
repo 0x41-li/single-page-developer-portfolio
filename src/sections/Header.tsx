@@ -23,6 +23,8 @@ const Header: React.FC = () => {
 
         {/* Icon links */}
         <div className="flex gap-[25px] md:gap-8">
+          {/*  */}
+
           {iconLinks.map((currentLinkData) => {
             return (
               <IconLink
@@ -33,6 +35,8 @@ const Header: React.FC = () => {
               />
             );
           })}
+
+          {/*  */}
         </div>
 
         {/*  */}

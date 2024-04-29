@@ -5,6 +5,7 @@ import PrimaryButton from "../components/PrimaryButton";
 
 // Assets
 import linesDonut_PNG from "../assets/graphics/lines-donut.png";
+import Typography from "../components/Typography";
 
 const ContactMe: React.FC = () => {
   return (
@@ -30,14 +31,18 @@ const ContactMe: React.FC = () => {
       <div className="mx-auto max-w-[343px] pt-[60px] md:max-w-[445px] xl:flex xl:max-w-[1110px] xl:justify-between xl:pt-[84px]">
         {/* Section's head */}
         <div className="basis-[445px]">
-          <h2 className="text-center text-[40px] font-bold leading-none -tracking-[1.14px] md:text-[72px] md:-tracking-[2.04px] xl:text-left xl:text-[88px] xl:-tracking-[2.5px]">
+          <Typography
+            tagName="h2"
+            styles="xl"
+            customClasses="text-center xl:text-left"
+          >
             Contact
-          </h2>
+          </Typography>
 
-          <p className="mt-5 text-center text-base font-medium leading-[26px] md:text-lg xl:mt-[36px] xl:text-left">
+          <Typography customClasses="mt-5 text-center xl:mt-[36px] xl:text-left">
             I would love to hear about your project and how I could help. Please
             fill in the form, and I’ll get back to you as soon as possible.
-          </p>
+          </Typography>
         </div>
 
         {/* Contact form */}

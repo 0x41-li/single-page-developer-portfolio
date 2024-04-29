@@ -2,6 +2,7 @@ import React from "react";
 
 // Components
 import PrimaryButton from "./PrimaryButton";
+import Typography from "./Typography";
 
 // Props Data types
 type ProjectCardProps = {
@@ -50,13 +51,23 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
       <div className="mt-5">
         {/* Project Title and technologies used */}
         <div className="flex flex-col gap-[7px]">
-          <h3 className="text-2xl font-bold uppercase">{title}</h3>
+          <Typography
+            tagName="h3"
+            styles="none"
+            customClasses="font-bold text-2xl uppercase"
+          >
+            {title}
+          </Typography>
 
           <div className="flex gap-[18px] font-medium">
             {technologies.map((technology) => (
-              <span key={technology} className="text-lg text-soft-gray">
+              <Typography
+                tagName="span"
+                key={technology}
+                customClasses="text-lg leading-[28px] text-soft-gray"
+              >
                 {technology}
-              </span>
+              </Typography>
             ))}
           </div>
         </div>

@@ -2,6 +2,7 @@ import React from "react";
 
 type TypographyProps = {
   tagName?: "h1" | "h2" | "h3" | "h4" | "h5" | "h6" | "p" | "span";
+  styles?: "xl" | "lg" | "sm" | "none";
   customClasses?: string;
   children: React.ReactNode;
 };
@@ -9,28 +10,34 @@ type TypographyProps = {
 // The default component
 const Typography: React.FC<TypographyProps> = ({
   tagName = "p",
+  styles = "sm",
   customClasses,
   children,
 }) => {
   let className;
 
-  switch (tagName.toLowerCase()) {
-    case "h1":
+  switch (styles.toLowerCase()) {
+    case "xl":
       className =
-        "text-center text-[40px] font-bold leading-none -tracking-[1.14px] md:text-left md:text-7xl md:-tracking-[2px] xl:text-[88px] xl:-tracking-[2.5px]";
+        "text-[40px] font-bold leading-none -tracking-[1.14px] md:text-7xl md:-tracking-[2px] xl:text-[88px] xl:-tracking-[2.5px]";
       break;
 
-    case "h2":
+    case "lg":
       className =
         "text-[32px] font-bold leading-10 -tracking-[1px] md:text-5xl md:leading-[56px] md:-tracking-[1.5px]";
       break;
 
-    case "p":
+    case "sm":
       className =
-        "text-base text-center font-medium leading-[26px] text-soft-gray md:text-left md:text-lg";
+        "text-base font-medium leading-[26px] text-soft-gray md:text-lg";
+      break;
+
+    case "none":
+      className = "";
       break;
 
     default:
+      className = "";
       break;
   }
 

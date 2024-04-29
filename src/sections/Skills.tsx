@@ -29,19 +29,19 @@ const Skills: React.FC = () => {
           </picture>
         </div>
 
-        {/* Skills Grid */}
+        {/* Skills FlexBox */}
         <div className="mx-auto flex max-w-[345px] flex-col gap-6 border-y py-10 text-center md:max-w-[708px] md:flex-row md:flex-wrap md:gap-0 md:gap-x-[7px] md:gap-y-[52px] md:border-b-0 md:pb-0 md:pt-[52px] xl:max-w-none xl:gap-x-[30px] xl:gap-y-[58px] xl:pt-[72px]">
           {/* Looping over the skills data and rendering */}
           {data.map(([skill, yearsOfExperience]) => (
             <div
               key={skill}
-              className="text-center md:shrink-0 md:grow-0 md:basis-[345px] md:text-left "
+              className="flex flex-col gap-px text-center md:shrink-0 md:grow-0 md:basis-[345px] md:gap-[14px] md:text-left "
             >
-              <Typography tagName="h2">{skill}</Typography>
-
-              <Typography customClasses="mt-px">
-                {yearsOfExperience} Years Experience
+              <Typography tagName="h2" styles="lg">
+                {skill}
               </Typography>
+
+              <Typography>{yearsOfExperience} Years Experience</Typography>
             </div>
           ))}
         </div>

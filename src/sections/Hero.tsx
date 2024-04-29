@@ -50,7 +50,11 @@ const Hero: React.FC = () => {
               {/* A wrapper to achieve the same underline effect as the design */}
               <div className="relative">
                 {/* Heading */}
-                <Typography tagName="h1">
+                <Typography
+                  tagName="h1"
+                  styles="xl"
+                  customClasses="text-center md:text-left"
+                >
                   Nice to{" "}
                   <span className="hidden md:block xl:hidden" aria-hidden />
                   meet you! <span className="hidden xl:block" aria-hidden />
@@ -70,7 +74,7 @@ const Hero: React.FC = () => {
               </div>
 
               {/* Paragraph */}
-              <Typography customClasses="mt-6 md:mt-[66px] xl:mt-[43px] max-w-[445px]">
+              <Typography customClasses="text-center md:text-left mt-6 md:mt-[66px] xl:mt-[43px] max-w-[445px]">
                 Based in the UK, I’m a front-end developer passionate about
                 building accessible web apps that users love.
               </Typography>
