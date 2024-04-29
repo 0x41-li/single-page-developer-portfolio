@@ -17,9 +17,20 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   previewProjectLink,
 }) => {
   return (
-    <div className="md:basis-[342px] xl:basis-[540px]">
+    <div className="group md:basis-[342px] xl:basis-[540px]">
       {/* project picture */}
-      <div className="">
+      <div className="relative">
+        {/* Project buttons */}
+        <div className="absolute left-0 top-0 hidden h-full w-full flex-col items-center justify-center gap-12 bg-[rgba(0,0,0,0.75)] opacity-0 transition-opacity duration-200 group-hover:opacity-100 xl:flex">
+          <AnchorPrimary type="anchor" href={previewProjectLink}>
+            view project
+          </AnchorPrimary>
+
+          <AnchorPrimary type="anchor" href={sourceCodeLink}>
+            view code
+          </AnchorPrimary>
+        </div>
+
         <picture>
           <img
             height="253px"
