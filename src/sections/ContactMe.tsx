@@ -8,7 +8,10 @@ import linesDonut_PNG from "../assets/graphics/lines-donut.png";
 
 const ContactMe: React.FC = () => {
   return (
-    <section className="relative mt-20 bg-hard-gray pb-[87px] md:mt-[100px] md:pb-[92px] xl:mt-[139px]">
+    <section
+      id="contact-form"
+      className="relative mt-20 bg-hard-gray pb-[87px] md:mt-[100px] md:pb-[92px] xl:mt-[139px]"
+    >
       {/* background graphic */}
       {/* the lines donut graphic */}
       <div

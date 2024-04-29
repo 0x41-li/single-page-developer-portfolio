@@ -71,7 +71,7 @@ const Projects: React.FC = () => {
           </h2>
 
           {/* contact us button */}
-          <AnchorPrimary type="anchor" href="#contact-me">
+          <AnchorPrimary type="anchor" href="#contact-form">
             contact me
           </AnchorPrimary>
         </div>
