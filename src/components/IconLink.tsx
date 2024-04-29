@@ -84,6 +84,8 @@ const IconLink: React.FC<IconLinkProps> = ({ of, link, ariaLabel }) => {
       );
       break;
 
+    default:
+      break;
     //
   }
 

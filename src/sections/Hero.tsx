@@ -7,6 +7,7 @@ import PrimaryButton from "../components/PrimaryButton";
 import developerProfileImage_PNG from "../assets/images/developer-profile-image.png";
 import linesDonut_PNG from "../assets/graphics/lines-donut.png";
 import unfilledWhiteBorderOval_PNG from "../assets/graphics/unfilled-white-bordered-oval.png";
+import Typography from "../components/Typography";
 
 const Hero: React.FC = () => {
   return (
@@ -49,7 +50,7 @@ const Hero: React.FC = () => {
               {/* A wrapper to achieve the same underline effect as the design */}
               <div className="relative">
                 {/* Heading */}
-                <h1 className="text-center text-[40px] font-bold leading-none -tracking-[1.14px] md:text-left md:text-7xl md:-tracking-[2px] xl:whitespace-nowrap xl:text-[88px] xl:-tracking-[2.5px]">
+                <Typography tagName="h1">
                   Nice to{" "}
                   <span className="hidden md:block xl:hidden" aria-hidden />
                   meet you! <span className="hidden xl:block" aria-hidden />
@@ -59,7 +60,7 @@ const Hero: React.FC = () => {
                     aria-hidden
                   />
                   Adam Keyes.
-                </h1>
+                </Typography>
 
                 {/* The underline */}
                 <span
@@ -69,10 +70,10 @@ const Hero: React.FC = () => {
               </div>
 
               {/* Paragraph */}
-              <p className="mt-6 text-center font-medium leading-[26px] text-soft-gray md:mt-[66px] md:text-left md:text-lg xl:mt-[43px] xl:max-w-[445px]">
+              <Typography>
                 Based in the UK, I’m a front-end developer passionate about
                 building accessible web apps that users love.
-              </p>
+              </Typography>
 
               {/* Button */}
               <div className="mt-6 text-center md:mt-[34px] md:text-left xl:mt-[66px]">
