@@ -1,7 +1,7 @@
 import React from "react";
 
 // Components
-import { Primary as ButtonPrimary } from "../components/buttons/Primary";
+import PrimaryButton from "../components/PrimaryButton";
 
 // Assets
 import linesDonut_PNG from "../assets/graphics/lines-donut.png";
@@ -46,6 +46,8 @@ const ContactMe: React.FC = () => {
           method="POST"
           className="mt-[50px] basis-[445px] md:mt-[48px] xl:mt-0"
         >
+          {/*  */}
+
           <div className="space-y-8">
             <input
               type="text"
@@ -68,7 +70,7 @@ const ContactMe: React.FC = () => {
             ></textarea>
 
             <div className="mt-6 flex justify-end md:mt-[34px] xl:mt-[66px]">
-              <ButtonPrimary>send message</ButtonPrimary>
+              <PrimaryButton>send message</PrimaryButton>
             </div>
 
             {/*  */}

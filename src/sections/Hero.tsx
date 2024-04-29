@@ -1,7 +1,7 @@
 import React from "react";
 
-// comps
-import { Primary as AnchorPrimary } from "../components/buttons/Primary";
+// Components
+import PrimaryButton from "../components/PrimaryButton";
 
 // Assets
 import developerProfileImage_PNG from "../assets/images/developer-profile-image.png";
@@ -76,9 +76,9 @@ const Hero: React.FC = () => {
 
               {/* Button */}
               <div className="mt-6 text-center md:mt-[34px] md:text-left xl:mt-[66px]">
-                <AnchorPrimary type="anchor" href="#contact-form">
+                <PrimaryButton type="anchor" href="#contact-form">
                   Contact Me
-                </AnchorPrimary>
+                </PrimaryButton>
               </div>
 
               {/*  */}

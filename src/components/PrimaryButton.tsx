@@ -1,12 +1,12 @@
 import React from "react";
 
-type PrimaryProps = {
+type PrimaryButtonProps = {
   type?: "button" | "anchor";
   href?: string;
   children: React.ReactNode;
 };
 
-const Primary: React.FC<PrimaryProps> = ({
+const PrimaryButton: React.FC<PrimaryButtonProps> = ({
   type = "button",
   href,
   children,
@@ -33,4 +33,4 @@ const Primary: React.FC<PrimaryProps> = ({
   );
 };
 
-export { Primary };
+export default PrimaryButton;

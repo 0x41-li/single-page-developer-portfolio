@@ -1,11 +1,11 @@
 // Utilities
 import React from "react";
 
-// components
+// Components
 import ProjectCard from "../components/ProjectCard";
-import { Primary as AnchorPrimary } from "../components/buttons/Primary";
+import PrimaryButton from "../components/PrimaryButton";
 
-// images
+// Assets
 import designPortfolioPNG2x from "../assets/images/projects/design-portfolio-2x.png";
 import eLearningLandingPagePNG2x from "../assets/images/projects/e-learning-landing-page-2x.png";
 import todoWebAppPNG2x from "../assets/images/projects/todo-web-app-2x.png";
@@ -13,7 +13,7 @@ import entertainmentWebAppPNG2x from "../assets/images/projects/entertainment-we
 import memoryGamePNG2x from "../assets/images/projects/memory-game-2x.png";
 import artGalleryShowcasePNG2x from "../assets/images/projects/art-gallery-showcase-2x.png";
 
-// data
+// Data
 const data = [
   {
     imageSrc: designPortfolioPNG2x,
@@ -59,6 +59,7 @@ const data = [
   },
 ];
 
+// The default component
 const Projects: React.FC = () => {
   return (
     <section className="mt-20 md:mt-[100px] xl:mt-[140px]">
@@ -71,9 +72,9 @@ const Projects: React.FC = () => {
           </h2>
 
           {/* contact us button */}
-          <AnchorPrimary type="anchor" href="#contact-form">
+          <PrimaryButton type="anchor" href="#contact-form">
             contact me
-          </AnchorPrimary>
+          </PrimaryButton>
         </div>
 
         {/* projects grid */}

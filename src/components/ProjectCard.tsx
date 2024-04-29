@@ -1,6 +1,9 @@
 import React from "react";
-import { Primary as AnchorPrimary } from "./buttons/Primary";
 
+// Components
+import PrimaryButton from "./PrimaryButton";
+
+// Props Data types
 type ProjectCardProps = {
   imageSrc: string;
   title: string;
@@ -9,6 +12,7 @@ type ProjectCardProps = {
   previewProjectLink: string;
 };
 
+// The default component
 const ProjectCard: React.FC<ProjectCardProps> = ({
   imageSrc,
   title,
@@ -22,13 +26,13 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
       <div className="relative">
         {/* Project buttons */}
         <div className="absolute left-0 top-0 hidden h-full w-full flex-col items-center justify-center gap-12 bg-[rgba(0,0,0,0.75)] opacity-0 transition-opacity duration-200 group-hover:opacity-100 xl:flex">
-          <AnchorPrimary type="anchor" href={previewProjectLink}>
+          <PrimaryButton type="anchor" href={previewProjectLink}>
             view project
-          </AnchorPrimary>
+          </PrimaryButton>
 
-          <AnchorPrimary type="anchor" href={sourceCodeLink}>
+          <PrimaryButton type="anchor" href={sourceCodeLink}>
             view code
-          </AnchorPrimary>
+          </PrimaryButton>
         </div>
 
         <picture>
@@ -59,13 +63,13 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
 
         {/* Project buttons */}
         <div className="mt-5 flex gap-[30px] xl:hidden">
-          <AnchorPrimary type="anchor" href={previewProjectLink}>
+          <PrimaryButton type="anchor" href={previewProjectLink}>
             view project
-          </AnchorPrimary>
+          </PrimaryButton>
 
-          <AnchorPrimary type="anchor" href={sourceCodeLink}>
+          <PrimaryButton type="anchor" href={sourceCodeLink}>
             view code
-          </AnchorPrimary>
+          </PrimaryButton>
         </div>
 
         {/*  */}
