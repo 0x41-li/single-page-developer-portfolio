@@ -70,7 +70,7 @@ const Hero: React.FC = () => {
               </div>
 
               {/* Paragraph */}
-              <Typography>
+              <Typography customClasses="mt-6 md:mt-[66px] xl:mt-[43px] max-w-[445px]">
                 Based in the UK, I’m a front-end developer passionate about
                 building accessible web apps that users love.
               </Typography>

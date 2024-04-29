@@ -2,6 +2,7 @@ import React from "react";
 
 // Graphics
 import linesDonut_PNG from "../assets/graphics/lines-donut.png";
+import Typography from "../components/Typography";
 
 // skills array
 // [skill, yearsOfExperience]
@@ -36,13 +37,11 @@ const Skills: React.FC = () => {
               key={skill}
               className="text-center md:shrink-0 md:grow-0 md:basis-[345px] md:text-left "
             >
-              <h3 className="text-[32px] font-bold leading-10 -tracking-[1px] md:text-5xl md:leading-[56px] md:-tracking-[1.5px]">
-                {skill}
-              </h3>
+              <Typography tagName="h2">{skill}</Typography>
 
-              <p className="mt-px font-medium leading-[26px] text-soft-gray md:mt-[14px] md:text-lg">
+              <Typography customClasses="mt-px">
                 {yearsOfExperience} Years Experience
-              </p>
+              </Typography>
             </div>
           ))}
         </div>
