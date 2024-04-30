@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState } from "react";
+import { object, z, ZodError } from "zod";
 
 // Components
 import PrimaryButton from "../components/PrimaryButton";
@@ -6,8 +7,74 @@ import PrimaryButton from "../components/PrimaryButton";
 // Assets
 import linesDonut_PNG from "../assets/graphics/lines-donut.png";
 import Typography from "../components/Typography";
+import FormField from "../components/FormField";
+
+// Form data schema
+const formSchema = z.object({
+  name: z.string().min(3).max(254),
+  email: z.string().email(),
+  message: z.string().min(10).max(5000),
+});
+
+// Infer form data types from zod schema
+type FormDataTypes = z.infer<typeof formSchema>;
 
 const ContactMe: React.FC = () => {
+  // Form data
+  const [formData, setFormData] = useState<FormDataTypes>({
+    name: "",
+    email: "",
+    message: "",
+  });
+
+  // Form errors
+  const [formErrors, setFormErrors] = useState<FormDataTypes>({
+    name: "",
+    email: "",
+    message: "",
+  });
+
+  //
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
+  ) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+  };
+
+  //
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    try {
+      formSchema.parse(formData);
+
+      console.log(formData);
+    } catch (error) {
+      if (error instanceof z.ZodError) {
+        setFormErrors(() => {
+          const tempVarForErrors: FormDataTypes = {
+            name: "",
+            email: "",
+            message: "",
+          };
+
+          Object.entries(error.formErrors.fieldErrors).forEach(
+            ([key, value]) => {
+              if (value)
+                tempVarForErrors[key as keyof typeof formData] = value[0];
+            },
+          );
+
+          return tempVarForErrors;
+        });
+
+        //
+      }
+    }
+  };
+
+  // Render the section
   return (
     <section
       id="contact-form"
@@ -47,32 +114,38 @@ const ContactMe: React.FC = () => {
 
         {/* Contact form */}
         <form
-          action="#"
+          onSubmit={handleSubmit}
           method="POST"
           className="mt-[50px] basis-[445px] md:mt-[48px] xl:mt-0"
         >
           {/*  */}
 
           <div className="space-y-8">
-            <input
+            <FormField
               type="text"
               name="name"
               placeholder="name"
-              className="block h-[43px] w-full border-b border-white bg-transparent bg-opacity-0 pb-4 pl-6 font-medium placeholder:text-base placeholder:uppercase placeholder:leading-[26px] placeholder:-tracking-[0.2px] focus:outline-none"
+              value={formData.name}
+              handleChange={handleChange}
             />
 
-            <input
-              type="text"
+            <FormField
+              type="email"
               name="email"
               placeholder="email"
-              className="mt-[50px] block h-[43px] w-full border-b border-white bg-transparent bg-opacity-0 pb-4 pl-6 font-medium placeholder:text-base placeholder:uppercase placeholder:leading-[26px] placeholder:-tracking-[0.2px] focus:outline-none"
+              value={formData.email}
+              handleChange={handleChange}
+              customClasses="mt-[50px]"
             />
 
-            <textarea
+            <FormField
+              tagname="textarea"
               name="message"
-              className="mt-[50px] block h-[107px] w-full border-b border-white bg-transparent bg-opacity-0 pb-4 pl-6 text-base font-medium leading-[26px] placeholder:text-base placeholder:uppercase placeholder:leading-[26px] placeholder:-tracking-[0.2px] focus:outline-none"
               placeholder="message"
-            ></textarea>
+              value={formData.message}
+              handleChange={handleChange}
+              customClasses="mt-[50px] !h-[107px]"
+            />
 
             <div className="mt-6 flex justify-end md:mt-[34px] xl:mt-[66px]">
               <PrimaryButton>send message</PrimaryButton>
