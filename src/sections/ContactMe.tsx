@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { object, z, ZodError } from "zod";
+import { z } from "zod";
 
 // Components
 import PrimaryButton from "../components/PrimaryButton";
@@ -11,9 +11,15 @@ import FormField from "../components/FormField";
 
 // Form data schema
 const formSchema = z.object({
-  name: z.string().min(3).max(254),
+  name: z
+    .string()
+    .min(3, { message: "Name must contains at least 3 characters" })
+    .max(254, { message: "Name must contains at most 254 characters" }),
   email: z.string().email(),
-  message: z.string().min(10).max(5000),
+  message: z
+    .string()
+    .min(10, { message: "Message must contains at least 10 characters" })
+    .max(5000, { message: "Message must contains at most 5000 characters" }),
 });
 
 // Infer form data types from zod schema
@@ -49,7 +55,12 @@ const ContactMe: React.FC = () => {
     try {
       formSchema.parse(formData);
 
-      console.log(formData);
+      // Reset form errors
+      setFormData({
+        name: "",
+        email: "",
+        message: "",
+      });
     } catch (error) {
       if (error instanceof z.ZodError) {
         setFormErrors(() => {
@@ -127,6 +138,7 @@ const ContactMe: React.FC = () => {
               placeholder="name"
               value={formData.name}
               handleChange={handleChange}
+              error={formErrors.name}
             />
 
             <FormField
@@ -136,6 +148,7 @@ const ContactMe: React.FC = () => {
               value={formData.email}
               handleChange={handleChange}
               customClasses="mt-[50px]"
+              error={formErrors.email}
             />
 
             <FormField
@@ -145,6 +158,7 @@ const ContactMe: React.FC = () => {
               value={formData.message}
               handleChange={handleChange}
               customClasses="mt-[50px] !h-[107px]"
+              error={formErrors.message}
             />
 
             <div className="mt-6 flex justify-end md:mt-[34px] xl:mt-[66px]">
