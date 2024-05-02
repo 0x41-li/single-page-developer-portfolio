@@ -8,7 +8,6 @@ import Footer from "./sections/Footer";
 
 const App: React.FC = () => {
   return (
-    // TODO: Remove the overflow hidden, and handle the overflow on the sections levels
     <div className="overflow-hidden">
       <Header />
       <Hero />
