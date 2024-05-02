@@ -25,7 +25,7 @@ const FormField: React.FC<FormFieldProps> = ({
   error,
   handleChange,
 }) => {
-  const classname = `uppercase block h-[43px] w-full border-b border-white bg-transparent bg-opacity-0 pb-4 pl-6 font-medium placeholder:text-base placeholder:uppercase placeholder:leading-[26px] placeholder:-tracking-[0.2px] focus:border-green focus:outline-none ${error && "border-[#FF6F5B] focus:border-[#FF6F5B]"}`;
+  const classname = `uppercase block h-[43px] w-full border-b border-white bg-transparent bg-opacity-0 pb-4 pl-6 font-medium placeholder:text-base placeholder:leading-[26px] placeholder:-tracking-[0.2px] focus:outline-none ${!error ? "focus:border-green" : "!border-[#FF6F5B] placeholder:text-[#FF6F5B] focus:border-[#FF6F5B]"}`;
 
   return (
     <div className="">
