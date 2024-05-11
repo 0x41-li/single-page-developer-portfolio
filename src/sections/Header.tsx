@@ -24,7 +24,6 @@ const Header: FC<HeaderProps> = ({ pageLoaded }) => {
   // Animating the refs
   useEffect(() => {
     if (pageLoaded) {
-      setTimeout(() => {
         // animating the logo
         if (logoRef.current) {
           anime({
@@ -47,7 +46,6 @@ const Header: FC<HeaderProps> = ({ pageLoaded }) => {
             easing: 'easeInOutExpo',
           });
         }
-      }, 1000);
     }
   }, [pageLoaded]);
 
