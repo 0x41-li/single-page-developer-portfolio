@@ -2,13 +2,13 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 
-// components
+// Components
 import App from "./App";
 
-// main css
+// Main css
 import "./main.css";
 
-// bind to the root id element, and render the react app inside
+// Bind to the root id element, and render the react app inside
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
     <App />
