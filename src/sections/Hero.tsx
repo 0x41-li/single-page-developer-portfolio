@@ -1,4 +1,4 @@
-import  { FC } from 'react';
+import { FC, useEffect, useRef } from 'react';
 
 // Components
 import PrimaryButton from '../components/PrimaryButton';
@@ -8,8 +8,30 @@ import Typography from '../components/Typography';
 import developerProfileImage_PNG from '../assets/images/developer-profile-image.png';
 import linesDonut_PNG from '../assets/graphics/lines-donut.png';
 import unfilledWhiteBorderOval_PNG from '../assets/graphics/unfilled-white-bordered-oval.png';
+import anime from 'animejs';
 
-const Hero: FC = () => {
+// Hero props type
+type HeroProps = {
+  pageLoaded: boolean;
+};
+
+const Hero: FC<HeroProps> = ({ pageLoaded }) => {
+  const pictureRef = useRef<HTMLPictureElement>(null);
+
+  useEffect(() => {
+    if (pageLoaded) {
+      if (pictureRef.current) {
+        anime({
+          targets: pictureRef.current,
+          opacity: [0, 1],
+          duration: 1000,
+          delay: 1000,
+          easing: 'easeInOutExpo',
+        });
+      }
+    }
+  }, [pageLoaded]);
+
   return (
     <section
       className='hero-section bg-no-repeat [background-position:left_-342px_top_124px]
@@ -33,8 +55,9 @@ const Hero: FC = () => {
         >
           {/* Profile image pic */}
           <picture
-            className='relative block max-w-[174px] md:-left-[13px] md:w-[349px] md:max-w-none
-              xl:left-0 xl:w-[444px]'
+            ref={pictureRef}
+            className='relative block max-w-[174px] opacity-0 md:-left-[13px] md:w-[349px]
+              md:max-w-none xl:left-0 xl:w-[444px]'
           >
             <img
               className='block w-full'

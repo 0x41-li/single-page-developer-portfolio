@@ -53,7 +53,7 @@ const App: React.FC = () => {
 
       <div className={`${!pageLoaded && 'hidden'}`}>
         <Header pageLoaded={pageLoaded} />
-        <Hero />
+        <Hero pageLoaded={pageLoaded}/>
         <Skills />
         <Projects />
         <ContactMe />
